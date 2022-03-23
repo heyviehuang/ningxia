@@ -11,8 +11,8 @@ $(document).ready(function() {
 
     var swiper = new Swiper(".index-popular-swiper", {
         slidesPerView: 3,
-        spaceBetween: 30,
-        slidesPerGroup: 3,
+        spaceBetween: 20,
+        slidesPerGroup: 1,
         loop: true,
         // loopFillGroupWithBlank: true,
         // pagination: {
