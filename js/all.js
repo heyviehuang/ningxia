@@ -24,4 +24,14 @@ $(document).ready(function() {
         //     prevEl: ".swiper-button-prev",
         // },
     });
+
+
+    $(window).scroll(function() {
+        var scrollPos = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        console.log(scrollPos, windowHeight);
+        //bg scroll
+        $('.img-bg-bubble').css('transform', 'translateY(' + -scrollPos / 2 + 'px)');
+        $('.img-bg-bubble2').css('transform', 'translateY(' + -scrollPos / 5 + 'px)');
+    });
 });
