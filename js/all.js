@@ -28,10 +28,10 @@ $(document).ready(function() {
 
     $(window).scroll(function() {
         var scrollPos = $(window).scrollTop();
-        var windowHeight = $(window).height();
-        console.log(scrollPos, windowHeight);
+        console.log(scrollPos);
         //bg scroll
         $('.img-bg-bubble').css('transform', 'translateY(' + -scrollPos / 2 + 'px)');
         $('.img-bg-bubble2').css('transform', 'translateY(' + -scrollPos / 5 + 'px)');
+        $(".img-bg-orange, .img-bg-orange2").css('transform', 'translateY(' + -scrollPos / 16 + 'px)');
     });
 });
