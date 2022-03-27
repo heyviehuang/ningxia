@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>敖翔飯店</title>
-    <link rel="shortcut icon" href="../img/LOGO.ico">
+    <title>檸夏</title>
+    <link rel="shortcut icon" href="../img/logo.ico">
     <!-- <meta name='description' content='為您打造就算沒有程式基礎，也能夠逐步學習獲得網頁排版技巧的紮實觀念，六角學院的講師將協助您成就更好的自己！'/>
     <meta property="og:title" content="六角學院"/>
     <meta property="og:description" content="打破影音課程售後不理，我們在線上等著你。">
@@ -22,91 +22,303 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="../js/all.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        <header class="navFixed">
-            <h1>
-                <a class="logo" href="../index.html">敖翔飯店</a>
-            </h1>
-            <nav class="navBar">
-                <ul class="navList wrap">
-                    <li><a href="../html/roomMenu.html">房型介紹</a></li>
-                    <li><a href="../html/bookNow.html">立即訂房</a></li>
-                    <li><a href="#">會員登入</a></li>
-                </ul>
-            </nav>
+    <div class="wrap">
+        <header class="navBar">
+            <div class="nav-BG">
+                <nav class="navContent">
+                    <h1>
+                        <a class="logo" href="../index.html">檸夏</a>
+                    </h1>
+                    <ul class="nav-menuList">
+                        <li><a href="../html/menu.html">菜單</a></li>
+                        <li><a href="../html/member.html">會員</a></li>
+                        <li><a href="../html/cart.html">購物車</a></li>
+                        <li><a href="#">搜尋</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
-
         <main>
-            <section class="banner-swiper">
-                <div class="swiper-wrapper">
-                    <img class="swiper-slide" src="../img/img-banner-1.png" alt=""></img>
-                </div>
-                <div class=" swiper-pagination"></div>
+            <section class="banner">
+                <img class="img-banner" src="../img/img-banner.png" alt="banner">
             </section>
-            <section class="roomMenu-List">
-                <div class="sectionTitle">
-                    <svg class="titleLineL">
-                    <polyline points="0,40 20,20 1465,20"/></svg>
-                    <h3>房型目錄</h3>
-                    <svg>
-                    <polyline points="0,40 20,20 1465,20"/></svg>
-                </div>
 
-                <ul class="roomMenu-btnList wrap">
-                    <li class="roomMenu-btnList-item">
-                        <img class="" src="../img/img-roomMenu-room1.png" alt="精緻客房">
-                        <div class="roomMenu-btnList-item-content">
-                            <h4>精緻客房</h4>
-                            <p>精緻客房採光良好與空間寬敞，附有加大雙人床、頂級羽絨被、獨立浴池與乾濕分離的淋浴間，讓您可以盡情在氤氳水氣，洗滌一天的疲憊感，帶給您最舒適的住宿體驗。</p>
-                            <a class="btn-dash" href="../html/roomDetails.html">查看詳情</a>
-                        </div>
-                    </li>
-                    <li class="roomMenu-btnList-item">
-                        <img class="" src="../img/img-roomMenu-room2.png" alt="豪華客房">
-                        <div class="roomMenu-btnList-item-content">
-                            <h4>豪華客房</h4>
-                            <p>豪華客房不僅附有加大雙人床與其他高級訂製傢俱，還配有豪華獨立浴池，與提供精選沐浴組，讓您可以沐浴在放鬆的香氣中，享受一夜好眠。</p>
-                            <a class="btn-dash" href="../html/roomDetails.html">查看詳情</a>
-                        </div>
-                    </li>
-                    <li class="roomMenu-btnList-item">
-                        <img class="" src="../img/img-roomMenu-room3.png" alt="景觀客房">
-                        <div class="roomMenu-btnList-item-content">
-                            <h4>景觀客房</h4>
-                            <p>景觀客房高雅經典，房內全景落地窗能將城市美景盡收眼底，自然光線灑落讓整間客房更顯朝氣明亮，您將感受到敖翔飯店全方位的精緻禮遇。</p>
-                            <a class="btn-dash" href="../html/roomDetails.html">查看詳情</a>
-                        </div>
-                    </li>
-                </ul>
-
-                <div class="btn-imgBG wrap">
-                    <a href="../html/bookNow.html">立即訂房</a>
+            <div class="bgContainer">
+                <div class="bg-main">
+                    <div class="img-bg-bubble2"></div>
+                    <div class="img-bg-orange3"></div>
+                    <div class="img-bg-orange4"></div>
+                    <div class="img-bg-orange5"></div>
+                    <div class="img-bg-pigment2 fade"></div>
                 </div>
-            </section>
+                <section class="menu-main">
+                    <div class="sectionTitle">
+                        <h3>菜單</h3>
+                        <span></span>
+                    </div>
+                    <ul class="menu-tab-productCategory">
+                        <li>
+                            <button class="menu-tab-productCategory-item1 productCategory-item-active">全部</button>
+                        </li>
+                        <li class="decorativePoint">
+                            <div></div>
+                            <div></div>
+                        </li>
+                        <li>
+                            <button class="menu-tab-productCategory-item2">果汁</button>
+                        </li>
+                        <li class="decorativePoint">
+                            <div></div>
+                            <div></div>
+                        </li>
+                        <li>
+                            <button class="menu-tab-productCategory-item3">茶</button>
+                        </li>
+                    </ul>
+                    <div class="bottom-decorativeLine">
+                        <ul class="menu-productList">
+                            <li class="menu-productList-item menu-productList-type1">
+                                <img class="productList-item-img" src="../img/img-popular1.jpg" alt="餐點1">
+                                <span class="productList-item-title">鮮橙翡翠</span>
+                                <p class="productList-item-p">柳橙</p>
+                                <ul class="productList-details">
+                                    <li class="amount-ice">
+                                        <h5>冰量</h5>
+                                        <div class="btn-count">
+                                            <button class="btn-count-minus">-</button>
+                                            <span class="btn-count-numTxt">少冰</span>
+                                            <button class="btn-count-plus">+</button>
+                                        </div>
+                                    </li>
+                                    <li class="amount-sugar">
+                                        <h5>甜度</h5>
+                                        <div class="btn-count">
+                                            <button class="btn-count-minus">-</button>
+                                            <span class="btn-count-numTxt">微糖</span>
+                                            <button class="btn-count-plus">+</button>
+                                        </div>
+                                    </li>
+                                    <li class="size">
+                                        <h5>尺寸</h5>
+                                        <ul class="size-buttonList">
+                                            <li><button>S</button></li>
+                                            <li><button>M</button></li>
+                                            <li><button>L</button></li>
+                                        </ul>
+                                    </li>
+                                    <li class="price">
+                                        <h5>價格</h5>
+                                        <h5>NT 80元</h5>
+                                    </li>
+                                </ul>
+                                <button class="productList-item-btnAddCart">加入購物車</button>
+                            </li>
+                            <li class="menu-productList-item menu-productList-type2">
+                                <img class="productList-item-img" src="../img/img-popular2.jpg" alt="餐點2">
+                                <span class="productList-item-title">紅色驚喜</span>
+                                <p class="productList-item-p">草莓</p>
+                                <ul class="productList-details">
+                                    <li class="amount-ice">
+                                        <h5>冰量</h5>
+                                        <div class="btn-count">
+                                            <button class="btn-count-minus">-</button>
+                                            <span class="btn-count-numTxt">少冰</span>
+                                            <button class="btn-count-plus">+</button>
+                                        </div>
+                                    </li>
+                                    <li class="amount-sugar">
+                                        <h5>甜度</h5>
+                                        <div class="btn-count">
+                                            <button class="btn-count-minus">-</button>
+                                            <span class="btn-count-numTxt">微糖</span>
+                                            <button class="btn-count-plus">+</button>
+                                        </div>
+                                    </li>
+                                    <li class="size">
+                                        <h5>尺寸</h5>
+                                        <ul class="size-buttonList">
+                                            <li><button>S</button></li>
+                                            <li><button>M</button></li>
+                                            <li><button>L</button></li>
+                                        </ul>
+                                    </li>
+                                    <li class="price">
+                                        <h5>價格</h5>
+                                        <h5>NT 80元</h5>
+                                    </li>
+                                </ul>
+                                <button class="productList-item-btnAddCart">加入購物車</button>
+                            </li>
+                            <li class="menu-productList-item menu-productList-type1">
+                                <img class="productList-item-img" src="../img/img-popular3.jpg" alt="餐點3">
+                                <span class="productList-item-title">紅寶石</span>
+                                <p class="productList-item-p">蔓越莓</p>
+                                <ul class="productList-details">
+                                    <li class="amount-ice">
+                                        <h5>冰量</h5>
+                                        <div class="btn-count">
+                                            <button class="btn-count-minus">-</button>
+                                            <span class="btn-count-numTxt">少冰</span>
+                                            <button class="btn-count-plus">+</button>
+                                        </div>
+                                    </li>
+                                    <li class="amount-sugar">
+                                        <h5>甜度</h5>
+                                        <div class="btn-count">
+                                            <button class="btn-count-minus">-</button>
+                                            <span class="btn-count-numTxt">微糖</span>
+                                            <button class="btn-count-plus">+</button>
+                                        </div>
+                                    </li>
+                                    <li class="size">
+                                        <h5>尺寸</h5>
+                                        <ul class="size-buttonList">
+                                            <li><button>S</button></li>
+                                            <li><button>M</button></li>
+                                            <li><button>L</button></li>
+                                        </ul>
+                                    </li>
+                                    <li class="price">
+                                        <h5>價格</h5>
+                                        <h5>NT 80元</h5>
+                                    </li>
+                                </ul>
+                                <button class="productList-item-btnAddCart">加入購物車</button>
+                            </li>
+                            <li class="menu-productList-item menu-productList-type2">
+                                <img class="productList-item-img" src="../img/img-popular4.jpg" alt="餐點2">
+                                <span class="productList-item-title">橙色鬱金香</span>
+                                <p class="productList-item-p">橘子</p>
+                                <ul class="productList-details">
+                                    <li class="amount-ice">
+                                        <h5>冰量</h5>
+                                        <div class="btn-count">
+                                            <button class="btn-count-minus">-</button>
+                                            <span class="btn-count-numTxt">少冰</span>
+                                            <button class="btn-count-plus">+</button>
+                                        </div>
+                                    </li>
+                                    <li class="amount-sugar">
+                                        <h5>甜度</h5>
+                                        <div class="btn-count">
+                                            <button class="btn-count-minus">-</button>
+                                            <span class="btn-count-numTxt">微糖</span>
+                                            <button class="btn-count-plus">+</button>
+                                        </div>
+                                    </li>
+                                    <li class="size">
+                                        <h5>尺寸</h5>
+                                        <ul class="size-buttonList">
+                                            <li><button>S</button></li>
+                                            <li><button>M</button></li>
+                                            <li><button>L</button></li>
+                                        </ul>
+                                    </li>
+                                    <li class="price">
+                                        <h5>價格</h5>
+                                        <h5>NT 80元</h5>
+                                    </li>
+                                </ul>
+                                <button class="productList-item-btnAddCart">加入購物車</button>
+                            </li>
+                            <li class="menu-productList-item menu-productList-type1">
+                                <img class="productList-item-img" src="../img/img-popular5.jpg" alt="餐點3">
+                                <span class="productList-item-title">香檳烏龍</span>
+                                <p class="productList-item-p">薄荷</p>
+                                <ul class="productList-details">
+                                    <li class="amount-ice">
+                                        <h5>冰量</h5>
+                                        <div class="btn-count">
+                                            <button class="btn-count-minus">-</button>
+                                            <span class="btn-count-numTxt">少冰</span>
+                                            <button class="btn-count-plus">+</button>
+                                        </div>
+                                    </li>
+                                    <li class="amount-sugar">
+                                        <h5>甜度</h5>
+                                        <div class="btn-count">
+                                            <button class="btn-count-minus">-</button>
+                                            <span class="btn-count-numTxt">微糖</span>
+                                            <button class="btn-count-plus">+</button>
+                                        </div>
+                                    </li>
+                                    <li class="size">
+                                        <h5>尺寸</h5>
+                                        <ul class="size-buttonList">
+                                            <li><button>S</button></li>
+                                            <li><button>M</button></li>
+                                            <li><button>L</button></li>
+                                        </ul>
+                                    </li>
+                                    <li class="price">
+                                        <h5>價格</h5>
+                                        <h5>NT 80元</h5>
+                                    </li>
+                                </ul>
+                                <button class="productList-item-btnAddCart">加入購物車</button>
+                            </li>
+                            <li class="menu-productList-item menu-productList-type2">
+                                <img class="productList-item-img" src="../img/img-popular6.jpg" alt="餐點2">
+                                <span class="productList-item-title">檸檬普洱</span>
+                                <p class="productList-item-p">酸酸甜甜的味道</p>
+                                <ul class="productList-details">
+                                    <li class="amount-ice">
+                                        <h5>冰量</h5>
+                                        <div class="btn-count">
+                                            <button class="btn-count-minus">-</button>
+                                            <span class="btn-count-numTxt">少冰</span>
+                                            <button class="btn-count-plus">+</button>
+                                        </div>
+                                    </li>
+                                    <li class="amount-sugar">
+                                        <h5>甜度</h5>
+                                        <div class="btn-count">
+                                            <button class="btn-count-minus">-</button>
+                                            <span class="btn-count-numTxt">微糖</span>
+                                            <button class="btn-count-plus">+</button>
+                                        </div>
+                                    </li>
+                                    <li class="size">
+                                        <h5>尺寸</h5>
+                                        <ul class="size-buttonList">
+                                            <li><button>S</button></li>
+                                            <li><button>M</button></li>
+                                            <li><button>L</button></li>
+                                        </ul>
+                                    </li>
+                                    <li class="price">
+                                        <h5>價格</h5>
+                                        <h5>NT 80元</h5>
+                                    </li>
+                                </ul>
+                                <button class="productList-item-btnAddCart">加入購物車</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="menu-btnToCart btn-radius0" href="../html/cart.html">前往購物車<img src="../img/img-arrowR.svg" alt="箭頭"></a>
+                </section>
+            </div>
         </main>
         <footer class="footer">
             <h2>
-                <a class="footerLogo" href="../index.html">敖翔飯店</a>
+                <a class="footerLogo " href="../index.html">檸夏</a>
             </h2>
             <ul class="footerContact">
                 <li>
-                    Copyright © 2022 flyhotel.All rights reserved.
+                    Copyright © 2022 heyviehuang.All rights reserved.
                 </li>
                 <li>
                     關於我們┃聯絡我們┃個人資料保護和隱私政策┃智慧財產權聲明
                 </li>
             </ul>
         </footer>
-        <a href="#" class="btnTop">
-            <span class="material-icons md-48">expand_less</span>
-        </a>
     </div>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </body>
 
 </html>

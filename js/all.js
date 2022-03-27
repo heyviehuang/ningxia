@@ -6,8 +6,15 @@ $(document).ready(function() {
         }, 700);
     });
 
-    $('#bookNow-date-checkIn, #bookNow-date-checkOut').datepicker();
-    // $('#bookNow-date-numOfPeople').selectmenu();
+    $('.productList-item-btnAddCart').click(function(event) {
+        event.preventDefault();
+        alert('已將商品加入購物車!');
+    });
+
+    $('.menu-tab-productCategory li').click(function(event) {
+        event.preventDefault();
+        $(this).find('button').addClass('productCategory-item-active').parent().siblings().find('button').removeClass("productCategory-item-active");
+    });
 
     var swiper = new Swiper(".index-popular-swiper", {
         slidesPerView: 3,
@@ -32,6 +39,6 @@ $(document).ready(function() {
         //bg scroll
         $('.img-bg-bubble').css('transform', 'translateY(' + -scrollPos / 2 + 'px)');
         $('.img-bg-bubble2').css('transform', 'translateY(' + -scrollPos / 5 + 'px)');
-        $(".img-bg-orange, .img-bg-orange2").css('transform', 'translateY(' + -scrollPos / 16 + 'px)');
+        $('.img-bg-orange, .img-bg-orange2, .img-bg-orange3, .img-bg-orange4, .img-bg-orange5').css('transform', 'translateY(' + -scrollPos / 16 + 'px)');
     });
 });
