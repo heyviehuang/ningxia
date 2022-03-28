@@ -13,7 +13,12 @@ $(document).ready(function() {
 
     $('.menu-tab-productCategory li').click(function(event) {
         event.preventDefault();
-        $(this).find('button').addClass('productCategory-item-active').parent().siblings().find('button').removeClass("productCategory-item-active");
+        $(this).find('button').addClass('productCategory-item-active').parent().siblings().find('button').removeClass('productCategory-item-active');
+    });
+
+    $('.size-buttonList li').click(function(event) {
+        event.preventDefault();
+        $(this).find('button').toggleClass('size-item-active').parent().siblings().find('button').removeClass('size-item-active');
     });
 
     var swiper = new Swiper(".index-popular-swiper", {
@@ -31,7 +36,6 @@ $(document).ready(function() {
         //     prevEl: ".swiper-button-prev",
         // },
     });
-
 
     $(window).scroll(function() {
         var scrollPos = $(window).scrollTop();
