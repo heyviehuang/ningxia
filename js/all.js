@@ -43,6 +43,6 @@ $(document).ready(function() {
         //bg scroll
         $('.img-bg-bubble').css('transform', 'translateY(' + -scrollPos / 2 + 'px)');
         $('.img-bg-bubble2').css('transform', 'translateY(' + -scrollPos / 5 + 'px)');
-        $('.img-bg-orange, .img-bg-orange2, .img-bg-orange3, .img-bg-orange4, .img-bg-orange5').css('transform', 'translateY(' + -scrollPos / 16 + 'px)');
+        $('.img-bg-orange, .img-bg-orange2, .img-bg-orange3, .img-bg-orange4, .img-bg-orange5, .img-bg-orange6, .img-bg-orange7').css('transform', 'translateY(' + -scrollPos / 16 + 'px)');
     });
 });

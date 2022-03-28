@@ -52,14 +52,16 @@ img {
 .index-popular,
 .index-contact,
 .menu-main,
-.cart-main {
+.cart-main,
+.login-main {
     padding: 240px 105px 0;
 }
 
 .index-story,
 .index-contact,
 .menu-main,
-.cart-main {
+.cart-main,
+.login-main {
     padding-bottom: 240px;
 }
 
@@ -225,7 +227,8 @@ p {
 .index-story,
 .index-contact-BG,
 .menu-productList,
-.cart-cartList {
+.cart-cartList,
+.login-main {
     position: relative;
 }
 
@@ -238,7 +241,9 @@ p {
 .bottom-decorativeLine::before,
 .bottom-decorativeLine::after,
 .cart-cartList::before,
-.cart-cartList::after {
+.cart-cartList::after,
+.login-main-decorativeLine::before,
+.login-main-decorativeLine::after {
     content: "";
     position: absolute;
     background-color: #FF865F;
@@ -251,7 +256,8 @@ p {
 .index-contact-BG::before,
 .menu-productList::before,
 .bottom-decorativeLine::before,
-.cart-cartList::before {
+.cart-cartList::before,
+.login-main-decorativeLine::before {
     width: 800px;
     height: 2px;
 }
@@ -272,6 +278,11 @@ p {
     right: -64px;
 }
 
+.login-main-decorativeLine::before {
+    top: 156px;
+    right: 48px;
+}
+
 .bottom-decorativeLine::before {
     bottom: 156px;
     left: 48px;
@@ -284,7 +295,8 @@ p {
 .index-contact-BG::after,
 .menu-productList::after,
 .bottom-decorativeLine::after,
-.cart-cartList::after {
+.cart-cartList::after,
+.login-main-decorativeLine::after {
     width: 2px;
     height: 568px;
 }
@@ -304,6 +316,11 @@ p {
 .cart-cartList::after {
     top: -88px;
     right: -5%;
+}
+
+.login-main-decorativeLine::after {
+    top: 96px;
+    right: 6%;
 }
 
 .bottom-decorativeLine::after {
@@ -850,7 +867,9 @@ p {
 .img-bg-orange2,
 .img-bg-orange3,
 .img-bg-orange4,
-.img-bg-orange5 {
+.img-bg-orange5,
+.img-bg-orange6,
+.img-bg-orange7 {
     position: absolute;
     z-index: -3;
     background: url("../img/img-bg-orange.png") no-repeat;
@@ -909,7 +928,8 @@ p {
 }
 
 .img-bg-orange,
-.img-bg-orange4 {
+.img-bg-orange4,
+.img-bg-orange6 {
     top: 13%;
     right: 12%;
     width: 184px;
@@ -919,6 +939,11 @@ p {
 .img-bg-orange4 {
     top: 45%;
     right: 1%;
+}
+
+.img-bg-orange6 {
+    top: 72%;
+    right: 8%;
 }
 
 .img-bg-orange2,
@@ -934,11 +959,16 @@ p {
     right: 0;
 }
 
-.img-bg-orange5 {
+.img-bg-orange5,
+.img-bg-orange7 {
     bottom: -8%;
     left: 9%;
     width: 240px;
     height: 240px;
+}
+
+.img-bg-orange7 {
+    bottom: 16%;
 }
 
 .img-bg-pigment {
@@ -952,4 +982,84 @@ p {
 .img-bg-pigment2::after {
     content: "";
     top: 200%;
+}
+
+
+/* ********************************/
+
+.login-from {
+    width: 48%;
+    padding: 32px;
+    margin: 0 auto;
+    /* background-color: #fff; */
+    background: -webkit-linear-gradient( rgb(255, 255, 255), rgba(255, 255, 255, .5), rgba(255, 255, 255, .5), rgba(255, 255, 255, .1));
+    background: -moz-linear-gradient( rgba(255, 255, 255, .1), rgba(255, 255, 255, .5), rgba(255, 255, 255, .5), rgba(255, 255, 255, .1));
+    background: -o-linear-gradient( rgba(255, 255, 255, .1), rgba(255, 255, 255, .5), rgba(255, 255, 255, .5), rgba(255, 255, 255, .1));
+}
+
+.login-username-container,
+.login-password-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-from>li:first-child {
+    margin-bottom: 16px;
+}
+
+.login-from>li:nth-child(2) {
+    margin-bottom: -8px;
+}
+
+.from-label {
+    color: #6A1817;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.from-input {
+    border-radius: 18px;
+    padding: 16px;
+    border: 1px solid #FBB265;
+    font-size: 16px;
+    color: #6A1817;
+    background-color: #FFF3DB;
+}
+
+.from-input:focus {
+    outline: 1px solid orange;
+    background-color: #FFF;
+}
+
+.from-input:active {
+    outline: 1px solid orange;
+    background-color: #FFF;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-container a {
+    width: 48%;
+    margin: 8px 0 0;
+    padding: 16px 0;
+}
+
+.btn-login {
+    background-color: #FB9169;
+}
+
+.btn-login:hover {
+    background-color: #FFC25C;
+}
+
+.btn-container a:first {
+    margin-right: 20px;
+}
+
+.login-main>.bottom-decorativeLine {
+    background: none;
 }
