@@ -53,7 +53,8 @@ img {
 .index-contact,
 .menu-main,
 .cart-main,
-.login-main {
+.login-main,
+.register-main {
     padding: 240px 105px 0;
 }
 
@@ -61,7 +62,8 @@ img {
 .index-contact,
 .menu-main,
 .cart-main,
-.login-main {
+.login-main,
+.register-main {
     padding-bottom: 240px;
 }
 
@@ -218,9 +220,9 @@ p {
 
 .bottom-decorativeLine {
     padding: 32px;
-    background: -webkit-linear-gradient( rgba(255, 255, 255, .1), rgba(255, 255, 255, .5), rgba(255, 255, 255, .5), rgba(255, 255, 255, .1));
-    background: -moz-linear-gradient( rgba(255, 255, 255, .1), rgba(255, 255, 255, .5), rgba(255, 255, 255, .5), rgba(255, 255, 255, .1));
-    background: -o-linear-gradient( rgba(255, 255, 255, .1), rgba(255, 255, 255, .5), rgba(255, 255, 255, .5), rgba(255, 255, 255, .1));
+    background: -webkit-linear-gradient( rgba(255, 255, 255, .1), rgba(255, 255, 255, .5), rgba(255, 255, 255, .5), rgba(255, 255, 255, 0));
+    background: -moz-linear-gradient( rgba(255, 255, 255, .1), rgba(255, 255, 255, .5), rgba(255, 255, 255, .5), rgba(255, 255, 255, 0));
+    background: -o-linear-gradient( rgba(255, 255, 255, .1), rgba(255, 255, 255, .5), rgba(255, 255, 255, .5), rgba(255, 255, 255, 0));
     border-radius: 18px;
 }
 
@@ -228,7 +230,8 @@ p {
 .index-contact-BG,
 .menu-productList,
 .cart-cartList,
-.login-main {
+.login-main,
+.register-main {
     position: relative;
 }
 
@@ -242,8 +245,8 @@ p {
 .bottom-decorativeLine::after,
 .cart-cartList::before,
 .cart-cartList::after,
-.login-main-decorativeLine::before,
-.login-main-decorativeLine::after {
+.main-decorativeLine::before,
+.main-decorativeLine::after {
     content: "";
     position: absolute;
     background-color: #FF865F;
@@ -257,7 +260,7 @@ p {
 .menu-productList::before,
 .bottom-decorativeLine::before,
 .cart-cartList::before,
-.login-main-decorativeLine::before {
+.main-decorativeLine::before {
     width: 800px;
     height: 2px;
 }
@@ -278,7 +281,7 @@ p {
     right: -64px;
 }
 
-.login-main-decorativeLine::before {
+.main-decorativeLine::before {
     top: 156px;
     right: 48px;
 }
@@ -296,7 +299,7 @@ p {
 .menu-productList::after,
 .bottom-decorativeLine::after,
 .cart-cartList::after,
-.login-main-decorativeLine::after {
+.main-decorativeLine::after {
     width: 2px;
     height: 568px;
 }
@@ -318,7 +321,7 @@ p {
     right: -5%;
 }
 
-.login-main-decorativeLine::after {
+.main-decorativeLine::after {
     top: 96px;
     right: 6%;
 }
@@ -832,6 +835,10 @@ p {
     border-top: 1px solid #ddab71;
 }
 
+.btn-pay {
+    margin: 0px 32px 0;
+}
+
 
 /* dynamic background  */
 
@@ -987,27 +994,33 @@ p {
 
 /* ********************************/
 
-.login-from {
+.login-from,
+.register-from {
     width: 48%;
     padding: 32px;
     margin: 0 auto;
-    /* background-color: #fff; */
     background: -webkit-linear-gradient( rgb(255, 255, 255), rgba(255, 255, 255, .5), rgba(255, 255, 255, .5), rgba(255, 255, 255, .1));
     background: -moz-linear-gradient( rgba(255, 255, 255, .1), rgba(255, 255, 255, .5), rgba(255, 255, 255, .5), rgba(255, 255, 255, .1));
     background: -o-linear-gradient( rgba(255, 255, 255, .1), rgba(255, 255, 255, .5), rgba(255, 255, 255, .5), rgba(255, 255, 255, .1));
 }
 
 .login-username-container,
-.login-password-container {
+.login-password-container,
+.register-username-container,
+.register-password-container,
+.register-confirmPassword-container {
     display: flex;
     flex-direction: column;
 }
 
-.login-from>li:first-child {
+.login-from>li:first-child,
+.register-from>li:first-child,
+.register-from>li:nth-child(2) {
     margin-bottom: 16px;
 }
 
-.login-from>li:nth-child(2) {
+.login-from>li:nth-child(2),
+.register-from>li:nth-child(3) {
     margin-bottom: -8px;
 }
 
@@ -1048,11 +1061,13 @@ p {
     padding: 16px 0;
 }
 
-.btn-login {
+.btn-login,
+.btn-register {
     background-color: #FB9169;
 }
 
-.btn-login:hover {
+.btn-login:hover,
+.btn-register:hover {
     background-color: #FFC25C;
 }
 
@@ -1060,6 +1075,7 @@ p {
     margin-right: 20px;
 }
 
-.login-main>.bottom-decorativeLine {
+.login-main .bottom-decorativeLine,
+.register-main .bottom-decorativeLine {
     background: none;
 }
