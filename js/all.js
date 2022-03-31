@@ -39,7 +39,15 @@ $(document).ready(function() {
 
     $(window).scroll(function() {
         var scrollPos = $(window).scrollTop();
-        console.log(scrollPos);
+        var windowHeight = $(window).height();
+        console.log(scrollPos, windowHeight);
+        // animated
+        $('.animated-t,.animated-r,.animated-b,.animated-l,.animated-m').each(function() {
+            var thisPos = $(this).offset().top;
+            if ((windowHeight + scrollPos) >= thisPos) {
+                $(this).addClass('fadeIn');
+            }
+        });
         //bg scroll
         $('.img-bg-bubble').css('transform', 'translateY(' + -scrollPos / 2 + 'px)');
         $('.img-bg-bubble2').css('transform', 'translateY(' + -scrollPos / 5 + 'px)');

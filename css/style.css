@@ -43,6 +43,19 @@ img {
     -webkit-transform: translate(-50%, -133%);
     -o-transform: translate(-50%, -133%);
     -moz-transform: translate(-50%, -133%);
+    animation-name: wordsAnim;
+    animation-duration: 5s;
+    animation-iteration-count: once;
+    transition: .1s;
+}
+
+@keyframes wordsAnim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 
@@ -1075,4 +1088,38 @@ p {
 .img-bg-pigment2::after {
     content: "";
     top: 200%;
+}
+
+
+/* animated */
+
+.animated-t,
+.animated-r,
+.animated-b,
+.animated-l,
+.animated-m {
+    opacity: 0;
+    transition: all 1.5s;
+}
+
+.animated-t {
+    transform: translateY(50px);
+}
+
+.animated-r {
+    transform: translateX(50px);
+}
+
+.animated-b {
+    transform: translateY(-50px);
+}
+
+.animated-l {
+    transform: translateX(-50px);
+}
+
+.fadeIn {
+    opacity: 1;
+    transform: translateX(0);
+    transform: translateY(0);
 }
