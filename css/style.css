@@ -921,7 +921,10 @@ p {
 
 .btn-login,
 .btn-register {
+    width: 100%;
     background-color: #FB9169;
+    border: none;
+    cursor: pointer;
 }
 
 .btn-login:hover,
