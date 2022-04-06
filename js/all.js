@@ -30,12 +30,27 @@ $(document).ready(function() {
         $(this).find('button').toggleClass('size-item-active').parent().siblings().find('button').removeClass('size-item-active');
     });
 
-    var swiper = new Swiper(".index-popular-swiper", {
-        slidesPerView: 3,
-        spaceBetween: 20,
-        slidesPerGroup: 1,
-        loop: true,
-    });
+    var mm = window.matchMedia("(max-width: 768px)");
+    mm.addListener(resizeWidth);
+    resizeWidth(mm);
+
+    function resizeWidth(pMatchMedia) {
+        if (pMatchMedia.matches) {
+            var swiper = new Swiper(".index-popular-swiper", {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                slidesPerGroup: 1,
+                loop: true,
+            });
+        } else {
+            var swiper = new Swiper(".index-popular-swiper", {
+                slidesPerView: 3,
+                spaceBetween: 20,
+                slidesPerGroup: 1,
+                loop: true,
+            });
+        }
+    }
 
     $(window).scroll(function() {
         var scrollPos = $(window).scrollTop();
