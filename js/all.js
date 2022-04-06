@@ -1,10 +1,19 @@
 $(document).ready(function() {
-    $('.btnTop').click(function(event) {
+
+    $('.nav-btnMenu').click(function(event) {
         event.preventDefault();
-        $('html,body').animate({
-            scrollTop: 0
-        }, 700);
+        $('.nav-menuList-mb').toggleClass('nav-menuList-mb-fadeIn');
+        $('#nav-btnMenu').text($(this).text() == 'close' ? 'menu' : 'close');
     });
+
+    function showBtnCondition() {
+        if ($(this).scrollTop() > 1200) {
+            $('.btnTop').fadeIn();
+        } else {
+            $('.btnTop').fadeOut();
+        }
+    }
+    $(window).scroll(showBtnCondition);
 
     $('.productList-item-btnAddCart').click(function(event) {
         event.preventDefault();
@@ -26,15 +35,6 @@ $(document).ready(function() {
         spaceBetween: 20,
         slidesPerGroup: 1,
         loop: true,
-        // loopFillGroupWithBlank: true,
-        // pagination: {
-        //     el: ".swiper-pagination",
-        //     clickable: true,
-        // },
-        // navigation: {
-        //     nextEl: ".swiper-button-next",
-        //     prevEl: ".swiper-button-prev",
-        // },
     });
 
     $(window).scroll(function() {
