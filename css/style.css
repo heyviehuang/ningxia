@@ -46,13 +46,16 @@ img {
 .btnTop {
     display: none;
     position: fixed;
-    right: 1%;
-    bottom: 1%;
+    right: 1.5%;
+    bottom: 1.5%;
     z-index: 99;
     transition: .3s;
+    background-color: rgb(254, 231, 93, 0.8);
+    border-radius: 40% 70% 40% 60% / 70% 60% 70% 50%;
 }
 
 .btnTop:hover {
+    background-color: rgb(236, 155, 126, 0.9);
     transform: translateY(-5px);
 }
 
@@ -703,8 +706,39 @@ p {
     color: #FFF;
 }
 
-.footerContact li:first-child {
+.footerContact li>span {
+    color: #FFF;
+}
+
+.footerContact>li:first-child {
     margin-bottom: 16px;
+}
+
+.footerContact-btnList {
+    display: flex;
+    justify-content: center;
+}
+
+.footerContact-btnList>li:hover {
+    cursor: pointer;
+    color: #FEE75D;
+}
+
+@media(max-width: 415px) {
+    .footerContact-btnList {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .footerContact-btnList .delimiter {
+        display: none;
+    }
+    .footerContact-btnList>li {
+        margin-bottom: 8px;
+    }
+    .footerContact-btnList>li:last-child {
+        margin-bottom: 0px;
+    }
 }
 
 

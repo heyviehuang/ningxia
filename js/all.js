@@ -6,6 +6,13 @@ $(document).ready(function() {
         $('#nav-btnMenu').text($(this).text() == 'close' ? 'menu' : 'close');
     });
 
+    $('.btnTop').click(function(event) {
+        event.preventDefault();
+        $('html,body').animate({
+            scrollTop: 0
+        }, 700);
+    });
+
     function showBtnCondition() {
         if ($(this).scrollTop() > 1200) {
             $('.btnTop').fadeIn();
