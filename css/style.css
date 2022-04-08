@@ -114,6 +114,12 @@ p {
     font-weight: bold;
 }
 
+@media (max-width:415px) {
+    h5 {
+        font-size: 20px;
+    }
+}
+
 
 /* common title*/
 
@@ -192,8 +198,6 @@ p {
     height: 50px;
     margin: 8px;
     background-color: #FFE4C7;
-    color: #6A1817;
-    font-size: 24px;
     border-radius: 25px;
 }
 
@@ -242,7 +246,13 @@ p {
 
 @media (max-width: 768px) {
     .bottom-decorativeLine {
-        padding: 32px 0;
+        padding: 32px 16px;
+    }
+}
+
+@media (max-width: 415px) {
+    .bottom-decorativeLine {
+        padding: 32px 8px;
     }
 }
 
@@ -333,6 +343,7 @@ p {
     .bottom-decorativeLine::after,
     .cart-cartList::after,
     .main-decorativeLine::after {
+        z-index: -1;
         opacity: .3;
     }
 }
@@ -380,15 +391,13 @@ p {
     width: 51px;
     height: 47px;
     background: url("../img/img-icon-frangipani.png") no-repeat;
+    background-size: contain;
 }
 
 .cartList-details-title h5::after {
     top: 50%;
-    -ms-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    right: -80%;
+    left: 2%;
+    transform: translateY(-50%);
 }
 
 @media(max-width: 768px) {
@@ -400,10 +409,14 @@ p {
 }
 
 @media(max-width: 415px) {
-    .productList-item-img-container::after,
-    .cartList-details-title h5::after {
+    .productList-item-img-container::after {
         right: 1px;
         transform: scale(0.8);
+    }
+    .cartList-details-title h5::after {
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
     }
 }
 
@@ -415,7 +428,6 @@ p {
 .menu-productList-type1,
 .menu-productList-type2 {
     position: relative;
-    width: 384px;
     border-radius: 18px;
     background: #FFFDEB;
     overflow: hidden;
@@ -490,6 +502,12 @@ p {
 @media(max-width: 768px) {
     .productList-item-title {
         width: 50%;
+    }
+}
+
+@media(max-width: 415px) {
+    .productList-item-title {
+        width: 80%;
     }
 }
 
@@ -803,7 +821,6 @@ p {
 }
 
 .swiper-slide {
-    /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -818,7 +835,6 @@ p {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    /* width: 384px !important; */
 }
 
 .index-popular-swiper {
@@ -826,23 +842,21 @@ p {
 }
 
 .swiper-wrapper {
-    padding: 32px 32px 88px;
+    padding: 32px 0 88px;
     cursor: grab;
 }
 
 @media(max-width: 768px) {
-    .index-popular {
-        width: 90%;
-    }
     .swiper-wrapper {
         padding: 32px 0 88px;
-        cursor: grab;
     }
-}
-
-@media(max-width: 415px) {
-    .index-popular {
-        width: 96%;
+    .index-popular-swiper {
+        border-right: 2px rgba(255, 134, 94, 0.5) solid;
+        border-left: 2px rgba(255, 134, 94, 0.5) solid;
+    }
+    .swiper-slide {
+        align-items: stretch;
+        padding: 0 20px;
     }
 }
 
@@ -987,7 +1001,8 @@ p {
 
 .productList-details {
     position: relative;
-    margin: 0 8% 32px;
+    margin: 0 8%;
+    padding: 32px 0;
 }
 
 .productList-details>li,
@@ -1032,7 +1047,7 @@ p {
     }
     .productList-details {
         position: relative;
-        margin: 0 3% 32px;
+        margin: 0 3%;
     }
 }
 
@@ -1042,7 +1057,6 @@ p {
 .cart-cartList-item {
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
     background-color: #FEDB89;
     border-radius: 18px;
     margin: 10px 0;
@@ -1050,7 +1064,9 @@ p {
 }
 
 .cart-cartList-item-img {
+    width: 50%;
     border-radius: 18px;
+    object-fit: cover;
 }
 
 .cart-cartList-item-details {
@@ -1068,10 +1084,7 @@ p {
     position: absolute;
     top: 50%;
     right: 3%;
-    -ms-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .cartList-details-container {
@@ -1079,6 +1092,10 @@ p {
     justify-content: space-around;
     align-items: center;
     margin: 32px 0;
+}
+
+.cart-cartList-item .btn-count-numTxt {
+    padding: 0 32px;
 }
 
 .cartList-detailsL li,
@@ -1124,7 +1141,43 @@ p {
 }
 
 .btn-pay {
-    margin: 0px 32px 0;
+    margin-top: 0;
+}
+
+@media (max-width:1000px) {
+    .cartList-details-title {
+        padding: 32px 0;
+    }
+    .cart-cartList-item .btn-count-numTxt {
+        margin-top: 0;
+        padding: 0 32px;
+    }
+    .cartList-details-container {
+        flex-direction: column;
+        align-items: stretch;
+        margin: 8px 0;
+        padding: 0 2%;
+    }
+    .cartList-detailsL li,
+    .cartList-detailsR div {
+        margin: 0;
+    }
+}
+
+@media (max-width:768px) {
+    .cart-cartList-item {
+        flex-direction: column;
+    }
+    .cart-cartList-item-img {
+        width: 100%;
+    }
+    .cart-cartList-item .btn-count-numTxt {
+        margin-top: 8px;
+        padding: 0;
+    }
+    .cart-cartList-item .cartList-details-price {
+        margin-top: 16px;
+    }
 }
 
 .login-from,
@@ -1271,37 +1324,24 @@ p {
     background: url("../img/img-bg-pigment.png") no-repeat;
     background-size: contain;
     transition: 1s;
-    /* animation 參數設定 */
     animation-name: fade;
-    /*動畫名稱，需與 keyframe 名稱對應*/
     animation-duration: 10s;
-    /*動畫持續時間，單位為秒*/
     animation-iteration-count: infinite;
-    /*動畫次數，infinite 為無限次*/
     transition: .1s;
     opacity: 0;
 }
 
 @keyframes fade {
     0% {
-        -ms-transform: translateY(0);
-        -webkit-transform: translateY(0);
-        -o-transform: translateY(0);
-        -moz-transform: translateY(0);
+        transform: translateY(0);
         opacity: .5;
     }
     50% {
-        -ms-transform: translateY(-100px);
-        -webkit-transform: translateY(-100px);
-        -o-transform: translateY(-100px);
-        -moz-transform: translateY(-100px);
+        transform: translateY(-100px);
         opacity: 1;
     }
     100% {
-        -ms-transform: translateY(0);
-        -webkit-transform: translateY(0);
-        -o-transform: translateY(0);
-        -moz-transform: translateY(0);
+        transform: translateY(0);
         opacity: .5;
     }
 }

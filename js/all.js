@@ -45,7 +45,7 @@ $(document).ready(function() {
         if (pMatchMedia.matches) {
             var swiper = new Swiper(".index-popular-swiper", {
                 slidesPerView: 1,
-                spaceBetween: 20,
+                spaceBetween: 0,
                 slidesPerGroup: 1,
                 loop: true,
             });
