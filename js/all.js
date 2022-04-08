@@ -29,7 +29,7 @@ $(document).ready(function() {
 
     $('.menu-tab-productCategory li').click(function(event) {
         event.preventDefault();
-        $(this).find('button').addClass('productCategory-item-active').parent().siblings().find('button').removeClass('productCategory-item-active');
+        $(this).find('.tab-productCategory-bg').addClass('productCategory-item-active').parent().siblings().find('.tab-productCategory-bg').removeClass('productCategory-item-active');
     });
 
     $('.size-buttonList li').click(function(event) {
