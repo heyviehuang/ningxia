@@ -555,7 +555,7 @@ p {
     }
     .img-banner-words {
         top: 25%;
-        width: 50vw;
+        width: 80vw;
     }
 }
 
@@ -565,7 +565,6 @@ p {
     }
     .img-banner-words {
         top: 40%;
-        width: 60vw;
     }
 }
 
