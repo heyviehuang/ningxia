@@ -16,6 +16,12 @@ body {
     padding: 0 32px;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 a {
     display: block;
     text-decoration: none;
@@ -28,10 +34,12 @@ button {
     padding: 0;
 }
 
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+input[type="button"],
+input[type="submit"],
+input[type="select"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .material-icons {
@@ -656,11 +664,17 @@ p {
 .index-ad {
     width: 100%;
     height: 645px;
-    overflow: hidden;
-    background-image: url("../img/img-index-ad.jpg");
-    background-position: center center;
+}
+
+.index-ad-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -6;
+    width: 100%;
+    height: 100%;
+    background: url("../img/img-index-ad.jpg") center no-repeat;
     background-size: cover;
-    background-attachment: fixed;
 }
 
 @media(max-width: 768px) {
@@ -1225,12 +1239,12 @@ p {
 
 .main-decorativeLine::before {
     top: 156px;
-    right: 48px;
+    right: 0;
 }
 
 .bottom-decorativeLine::before {
     bottom: 156px;
-    left: 48px;
+    left: 0px;
 }
 
 
@@ -1254,7 +1268,7 @@ p {
 
 .index-contact-BG::after {
     top: -56px;
-    left: 30px;
+    left: 3%;
 }
 
 .menu-productList::after,
@@ -1270,7 +1284,7 @@ p {
 
 .bottom-decorativeLine::after {
     bottom: 96px;
-    left: 72px;
+    left: 6%;
 }
 
 @media(max-width: 768px) {
