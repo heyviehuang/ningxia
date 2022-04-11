@@ -1269,6 +1269,20 @@ p {
     background: none;
 }
 
+@media (max-width:768px) {
+    .login-from,
+    .register-from {
+        width: 80%;
+    }
+}
+
+@media (max-width:415px) {
+    .login-from,
+    .register-from {
+        width: 100%;
+    }
+}
+
 
 /* dynamic background  */
 
