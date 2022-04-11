@@ -25,6 +25,7 @@ button {
     display: block;
     border: none;
     cursor: pointer;
+    padding: 0;
 }
 
 img {
@@ -606,7 +607,7 @@ p {
         margin-bottom: 8px;
     }
     .footerContact-btnList>li:last-child {
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
 }
 
@@ -722,7 +723,7 @@ p {
 
 .index-contact-BG {
     margin: 0 32px 32px 240px;
-    padding: 88px 96px 0px 136px;
+    padding: 88px 96px 0 136px;
     background: -webkit-linear-gradient( #FFCC97, #fbd1a500);
     background: -moz-linear-gradient( #FFCC97, #fbd1a500);
     background: -o-linear-gradient( #FFCC97, #fbd1a500);
