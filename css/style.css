@@ -54,7 +54,6 @@ input[type="select"] {
 }
 
 .btnTop {
-    display: none;
     position: fixed;
     right: 1.5%;
     bottom: 1.5%;
@@ -722,7 +721,7 @@ p {
 }
 
 .swiper-wrapper {
-    padding: 32px 0 88px;
+    padding: 32px 32px 88px;
     cursor: grab;
 }
 
